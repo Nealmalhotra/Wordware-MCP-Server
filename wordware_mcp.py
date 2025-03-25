@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize FastMCP server with "vc" name to match config
 mcp = FastMCP("vc")
-API_KEY = "ww-7UJeLACUKHchqbTMxm9jVz7amTLGRH2RSGSOL6vYc08DJkUUL0Av63"
+API_KEY = os.getenv("WORDWARE_API_KEY")
 
 # Global in-memory job store (for demo purposes)
 jobs: Dict[str, Dict[str, Any]] = {}
